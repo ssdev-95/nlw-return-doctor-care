@@ -1,4 +1,4 @@
-import { Container } from '@chakra-ui/react'
+import { Container, Button } from '@chakra-ui/react'
 
 export function HomeSection() {
 	return (
@@ -8,7 +8,7 @@ export function HomeSection() {
 			width="100%"
 		>
 			<Container as="div"width="100%">
-				<bold>WELCOME TO DOCTOR CARE 👋</bold>
+				<strong>WELCOME TO DOCTOR CARE 👋</strong>
 				<h1>Medical assistancy made easy for everyone!</h1>
 				<p>The doctors at Doctor Care goes beyond simptoms to get rid on the root of the disease and propose a long term cure.</p>
 				<Button>

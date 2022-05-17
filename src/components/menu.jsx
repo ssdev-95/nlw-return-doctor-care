@@ -1,4 +1,5 @@
 import {
+	Image,
 	Button,
   Drawer,
   DrawerBody,
@@ -20,7 +21,7 @@ export function Menu({ isOpen, onClose }) {
 			<DrawerContent bg="green.def">
 				<DrawerCloseButton />
 				<DrawerHeader>
-					<Image src="./assets/logo.svg" alt="Doctor Care logo" />
+					<Image src="/logo.svg" alt="Doctor Care logo" />
 				</DrawerHeader>
 				<DrawerBody>lol</DrawerBody>
 				<DrawerFooter>
