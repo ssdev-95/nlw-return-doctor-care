@@ -1,5 +1,6 @@
 import {
-	Image,
+	Flex,
+	Text,
 	Button,
   Drawer,
   DrawerBody,
@@ -18,10 +19,17 @@ export function Menu({ isOpen, onClose }) {
       onClose={onClose}
 		>
 			<DrawerOverlay />
-			<DrawerContent bg="green.def">
-				<DrawerCloseButton />
+			<DrawerContent bg="brand.green.def" h="100%">
+				<DrawerCloseButton color="#f0f2f5" />
 				<DrawerHeader>
-					<Image src="/logo.svg" alt="Doctor Care logo" />
+					<Text
+						color="#f0f2f5"
+						display="flex"
+						fontWeight="400"
+					>
+						Doctor
+		        <Text fontWeight="700">Care</Text>
+					</Text>
 				</DrawerHeader>
 				<DrawerBody>lol</DrawerBody>
 				<DrawerFooter>

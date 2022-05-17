@@ -4,6 +4,7 @@ import { HomeSection } from './components/sections/home'
 import { AboutSection } from './components/sections/about'
 import { ServicesSection } from './components/sections/services'
 import { TestimonialsSection } from './components/sections/testimonials'
+import { Footer } from './components/footer'
 
 import './styles/app.scss'
 
@@ -16,9 +17,10 @@ function App() {
 		>
       <Header />
 			<HomeSection />
-			<AboutSection />
 			<ServicesSection />
+			<AboutSection />
 			<TestimonialsSection />
+			<Footer />
     </Container>
   )
 }

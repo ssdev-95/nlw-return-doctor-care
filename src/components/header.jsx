@@ -6,7 +6,10 @@ import {
 	Image,
 	Link,
 	Flex,
+	Icon
 } from '@chakra-ui/react'
+
+import { List } from 'phosphor-react'
 
 import { Menu } from './menu'
 
@@ -22,6 +25,9 @@ export function Header() {
 			display="flex"
 			alignItems="center"
 			justifyContent="space-between"
+			position="fixed"
+			bg="brand.green.light1"
+			zIndex={10}
 		>
 			<Image
 				src="/logo.svg"
@@ -30,7 +36,12 @@ export function Header() {
 		{ isMobile ?
 			<>
 				<Button bg="transparent" onClick={onOpen}>
-					{"\0/"}
+					<Icon
+						as={List}
+						color="brand.green.def"
+						h={10}
+						w={10}
+					/>
 				</Button>
 				<Menu isOpen={isOpen} onClose={onClose} />
 			</> :

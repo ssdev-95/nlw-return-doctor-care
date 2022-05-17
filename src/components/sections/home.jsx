@@ -1,4 +1,8 @@
-import { Container, Button } from '@chakra-ui/react'
+import {
+	Container, Button, Flex, Image, Icon, Text, Heading
+} from '@chakra-ui/react'
+
+import { WhatsappLogo } from 'phosphor-react'
 
 export function HomeSection() {
 	return (
@@ -6,15 +10,45 @@ export function HomeSection() {
 			as="section"
 			id="home"
 			width="100%"
+			pt={100}
+		  pb={225}
 		>
-			<Container as="div"width="100%">
-				<strong>WELCOME TO DOCTOR CARE 👋</strong>
-				<h1>Medical assistancy made easy for everyone!</h1>
-				<p>The doctors at Doctor Care goes beyond simptoms to get rid on the root of the disease and propose a long term cure.</p>
-				<Button>
-					SCHEDULE AN APPOINTMENT
+			<Flex
+				as="div"
+				flexDirection="column"
+				gap="2.75rem"
+				width="100%"
+				textAlign="center"
+			>
+				<Text color="brand.green.def">
+					WELCOME TO DOCTOR CARE 👋
+				</Text>
+				<Heading aa="h1">Medical assistancy made easy for everyone!</Heading>
+				<Text size={10}>The doctors at Doctor Care goes beyond simptoms to get rid on the root of the disease and propose a long term cure.</Text>
+				<Button
+					color="#f0f2f5"
+					bg="brand.green.def"
+					fontSize={16}
+					borderRadius={100}
+					py={6}
+				>
+		      <Flex
+						as="a"
+						gap={3}
+						alignItems="center"
+						href="https://google.com"
+						target="__blank"
+					>
+					  <Icon
+	   					as={WhatsappLogo}
+  						h={6}
+  						w={6}
+  					/>
+  					SCHEDULE AN APPOINTMENT
+					</Flex>
 				</Button>
-			</Container>
+			</Flex>
+			<Image src="/lady.png" alt="An affro lady" mt="4rem" mx="auto" />
 		</Container>
 	)
 }

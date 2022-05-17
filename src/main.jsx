@@ -12,20 +12,20 @@ const colors = {
 			light2: '#f7f9f9',
 			hover: '#00453a'
 		},
-		beige: '#fffaf1'
-	},
-	grey: {
-		headline: '#061800',
-		paragraph: '#384633'
-	},
-	white: '#3e3e3e'
+		beige: '#fffaf1',
+		white: '#3e3e3e',
+		grey: {
+			headline: '#061800',
+			paragraph: '#384633'
+		}
+	}
 }
 
 const theme = extendTheme({ colors })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-		<ChakraProvider theme={theme} reset>
+		<ChakraProvider theme={theme} reset={true}>
 			<App />
 		</ChakraProvider>
   </React.StrictMode>
