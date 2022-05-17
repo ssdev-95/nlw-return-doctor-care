@@ -20,9 +20,9 @@ export function HomeSection() {
 				width="100%"
 				textAlign="center"
 			>
-				<Text color="brand.green.def">
+				<Heading as="h3" size="sm" color="brand.green.def">
 					WELCOME TO DOCTOR CARE 👋
-				</Text>
+				</Heading>
 				<Heading aa="h1">Medical assistancy made easy for everyone!</Heading>
 				<Text size={10}>The doctors at Doctor Care goes beyond simptoms to get rid on the root of the disease and propose a long term cure.</Text>
 				<Button

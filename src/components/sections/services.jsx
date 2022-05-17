@@ -38,7 +38,7 @@ export function ServicesSection() {
 				</Flex>
 		  </Box>
 			<Container id="services" pt="5.5rem" textAlign="center" mt="-11rem">
-				<Text color="brand.green.def" size="lg" fontWeight="500">SERVICES</Text>
+				<Heading as="h3" color="brand.green.def" size="sm" fontWeight="500">SERVICES</Heading>
 				<Heading w="15.75rem" m="0 auto" size="2xl">How can we help to make you feel better?</Heading>
 				{services.map((service, index) => (
 				<Box
