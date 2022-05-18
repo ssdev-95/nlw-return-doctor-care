@@ -2,6 +2,7 @@ import {
 	Flex,
 	Link,
 	Text,
+	Icon,
 	Button,
   Drawer,
   DrawerBody,
@@ -11,6 +12,10 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from '@chakra-ui/react'
+
+import {
+	YoutubeLogo, FacebookLogo, InstagramLogo
+} from 'phosphor-react'
 
 export function Menu({ isOpen, onClose }) {
 	return (
@@ -59,8 +64,21 @@ export function Menu({ isOpen, onClose }) {
 					</Button>
 				</Flex>
 				</DrawerBody>
-				<DrawerFooter>
-					<Button>lol</Button>
+				<DrawerFooter
+					w="100%"
+					pt={12}
+					color="brand.green.light1"
+				>
+					<Flex
+						gap={10}
+						w="100%"
+						alignItems="center"
+						justifyContent="center"
+					>	
+						<Icon as={InstagramLogo} h={10} w={10} />
+						<Icon as={FacebookLogo} h={10} w={10}/>
+						<Icon as={YoutubeLogo} h={10} w={10}/>
+					</Flex>
 				</DrawerFooter>
 			</DrawerContent>
 		</Drawer>
