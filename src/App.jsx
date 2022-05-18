@@ -4,9 +4,8 @@ import { HomeSection } from './components/sections/home'
 import { AboutSection } from './components/sections/about'
 import { ServicesSection } from './components/sections/services'
 import { TestimonialsSection } from './components/sections/testimonials'
+import { ContactSection } from './components/sections/contact'
 import { Footer } from './components/footer'
-
-import './styles/app.scss'
 
 function App() {
   return (
@@ -20,8 +19,9 @@ function App() {
 			<ServicesSection />
 			<AboutSection />
 			<TestimonialsSection />
+			<ContactSection />
 			<Footer />
-    </Container>
+		</Container>
   )
 }
 

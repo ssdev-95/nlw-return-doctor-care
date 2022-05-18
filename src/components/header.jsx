@@ -51,6 +51,7 @@ export function Header() {
 					<Link href="#services">Services</Link>
 					<Link href="#about">About</Link>
 					<Link href="#testimonials">Testimonials</Link>
+					<Link href="#contact">Contact</Link>
 				</Flex>		
 				<Button
 					bg="tranparent"

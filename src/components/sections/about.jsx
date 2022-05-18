@@ -4,7 +4,13 @@ import {
 
 export function AboutSection() {
 	return (
-		<Container as="section" id="about" pt="5.5rem">
+		<Container
+			as="section"
+			id="about"
+			pt="5.5rem"
+			pb="1.25rem"
+			bg="brand.beige"
+		>
 			<Flex direction="column" gap={5}>
 				<Heading as="h3" size="sm" fontWeight="500" color="brand.green.def">ABOUT US</Heading>
 				<Heading as="h2">Understand who we are and why we exists.</Heading>
