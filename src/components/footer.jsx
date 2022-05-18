@@ -6,6 +6,8 @@ import {
 	YoutubeLogo, FacebookLogo, InstagramLogo
 } from 'phosphor-react'
 
+import Fade from 'react-reveal/Fade'
+
 export function Footer() {
 	return(
 		<Container
@@ -21,6 +23,7 @@ export function Footer() {
 			content="flex-start"
 			gap={6}
 		>
+			<Fade left>
 			<Heading
 				color="#f0f2f5"
 				display="flex"
@@ -36,6 +39,7 @@ export function Footer() {
 				<Icon as={FacebookLogo} h={8} w={8} />
 				<Icon as={YoutubeLogo} h={8} w={8} />
 			</Flex>
+			</Fade>
 		</Container>
 	)
 }

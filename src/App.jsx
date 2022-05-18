@@ -1,4 +1,12 @@
-import { Container } from '@chakra-ui/react'
+import { useState, useEffect } from 'react'
+
+import {
+	Container, Button, Icon
+} from '@chakra-ui/react'
+
+import { ArrowBendRightUp } from 'phosphor-react'
+import Fade from 'react-reveal/Fade'
+
 import { Header } from './components/header'
 import { HomeSection } from './components/sections/home'
 import { AboutSection } from './components/sections/about'
@@ -8,18 +16,61 @@ import { ContactSection } from './components/sections/contact'
 import { Footer } from './components/footer'
 
 function App() {
+	const [hasScrolled, setHasScrolled] = useState(false)
+
+	const checkScrollTop = () => {
+		const offset = window.pageYOffset
+
+    if (!hasScrolled && offset > 150){
+      setHasScrolled(true)
+    } else if (hasScrolled && offset <= 150){
+      setHasScrolled(false)
+    }
+  }
+
+	useEffect(() => {
+		const listener = window.addEventListener('scroll', checkScrollTop)
+
+		return () => {
+			window.removeEventListener('scroll',listener)
+		}
+	})
+
   return (
     <Container
 			width="100vw"
 			minH="100vh"
 			bg="brand.green.light1"
 		>
-      <Header />
+      <Header hasScrolled={hasScrolled} />
 			<HomeSection />
 			<ServicesSection />
 			<AboutSection />
 			<TestimonialsSection />
 			<ContactSection />
+			<Button
+				px={2}
+				py={4}
+				bg="brand.green.def"
+				borderWidth={2}
+				borderColor="brand.green.light1"
+				position="fixed"
+				bottom="2rem"
+				right="2rem"
+				borderRadius="4rem"
+				zIndex={hasScrolled ? 4 : -4}
+				onClick={() => window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				})}
+			>
+				<Icon
+					as={ArrowBendRightUp}
+					color="brand.green.light2"
+					h={6}
+					w={7}
+				/>
+			</Button>
 			<Footer />
 		</Container>
   )

@@ -3,6 +3,7 @@ import {
 } from '@chakra-ui/react'
 
 import { WhatsappLogo } from 'phosphor-react'
+import Fade from 'react-reveal/Fade'
 
 export function HomeSection() {
 	return (
@@ -20,6 +21,7 @@ export function HomeSection() {
 				width="100%"
 				textAlign="center"
 			>
+			<Fade left>
 				<Heading as="h3" size="sm" color="brand.green.def">
 					WELCOME TO DOCTOR CARE 👋
 				</Heading>
@@ -47,8 +49,11 @@ export function HomeSection() {
   					SCHEDULE AN APPOINTMENT
 					</Flex>
 				</Button>
+			</Fade>
 			</Flex>
+		 	<Fade right>
 			<Image src="/lady.png" alt="An affro lady" mt="4rem" mx="auto" />
+			</Fade>
 		</Container>
 	)
 }

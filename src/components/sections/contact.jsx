@@ -4,6 +4,7 @@ import {
 import {
 	WhatsappLogo, EnvelopeSimple, MapPin
 } from 'phosphor-react'
+import Fade from 'react-reveal/Fade'
 
 export function ContactSection() {
 	return (
@@ -14,6 +15,7 @@ export function ContactSection() {
 			pb="1.5rem"
 			bg="#fff"
 		>
+			<Fade right>
 			<Heading mb="1.8rem">Contact us</Heading>
 			<Text
 				my="0.89rem"
@@ -28,7 +30,7 @@ export function ContactSection() {
 					w={5}
 				/>
 				&nbsp;
-				R. Amouri Souza, 297
+				R. do Limoeiro, 666
 			</Text>
 			<Text
 				my="0.89rem"
@@ -56,11 +58,14 @@ export function ContactSection() {
 				&nbsp;
 				<Text size="md">SCHEDULE AN APPOINTMENT</Text>
 			</Button>
+			</Fade>
+			<Fade bottom>
 			<Image
 				src="/guy.png"
 				pt="3.5rem"
 				alt="An affro guy"
 			/>
+			</Fade>
 		</Container>
 	)
 }

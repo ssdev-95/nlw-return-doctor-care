@@ -8,6 +8,7 @@ import {
 } from '@chakra-ui/react'
 
 import { Quote } from '../quote'
+import Fade from 'react-reveal/Fade'
 
 export function TestimonialsSection() {
 	const authors = [
@@ -27,6 +28,7 @@ export function TestimonialsSection() {
 			pb="1.5rem"
 			px={0}
 		>
+			<Fade left>
 			<Heading
 				as="h3"
 				size="sm"
@@ -35,6 +37,7 @@ export function TestimonialsSection() {
 			>
 				TESTIMONIALS
 			</Heading>
+			<Container maxW="400px">
 			<Swiper
 				spaceBetween={50}
 				slidesPerView={1}
@@ -51,6 +54,8 @@ export function TestimonialsSection() {
 					</SwiperSlide>
 				))}
 			</Swiper>
+			</Container>
+			</Fade>
 		</Container>
 	)
 }

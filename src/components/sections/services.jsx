@@ -8,6 +8,7 @@ import {
 } from '@chakra-ui/react'
 
 import { Check } from 'phosphor-react'
+import Fade from 'react-reveal/Fade'
 
 export function ServicesSection() {
 	const services = [
@@ -24,6 +25,7 @@ export function ServicesSection() {
 			bg="brand.green.light2"
 			w="100%"
 		>
+			<Fade left>
 		  <Box bg="brand.beige" transform="translateY(-15.3rem)" w="fit-content" m="0 auto" p="2.5rem" borderRadius={4}>
 				<Flex flexDirection="column" gap={50}>
 					<Heading as="h1" fontSize="3.5rem" textAlign="center">
@@ -42,9 +44,12 @@ export function ServicesSection() {
 					</Heading>
 				</Flex>
 		  </Box>
+			</Fade>
+			<Fade right>
 			<Container id="services" pt="5.5rem" textAlign="center" mt="-11rem">
 				<Heading as="h3" color="brand.green.def" size="sm" fontWeight="500">SERVICES</Heading>
 				<Heading w="15.75rem" m="0 auto" size="2xl">How can we help to make you feel better?</Heading>
+			<Container maxW="fit-content">
 				<Swiper
 					spaceBetween={50}
 					slidesPerView={1}
@@ -81,7 +86,9 @@ export function ServicesSection() {
 				</SwiperSlide>
 				))}
 				</Swiper>
+				</Container>
 			</Container>
+			</Fade>
 		</Container>
 	)
 }
