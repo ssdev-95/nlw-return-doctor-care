@@ -7,9 +7,9 @@ import { Quotes } from 'phosphor-react'
 export function Quote({author, children}) {
 	return (
 		<Box
-			w="350px"
+			w="375px"
 			p="1rem"
-			bg="brand.beige"
+			bg="brand.green.light2"
 			display="inline-block"
 			borderRadius={6}
 			my="1.45rem"
