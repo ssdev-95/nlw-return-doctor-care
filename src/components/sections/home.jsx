@@ -50,8 +50,7 @@ export function HomeSection() {
 						as="a"
 						gap={3}
 						alignItems="center"
-						href="https://google.com"
-						target="__blank"
+						href="https://wa.me/+5592981616080"
 					>
 					  <Icon
 	   					as={WhatsappLogo}

@@ -14,9 +14,11 @@ import { ServicesSection } from '../components/sections/services'
 import { TestimonialsSection } from '../components/sections/testimonials'
 import { ContactSection } from '../components/sections/contact'
 import { Footer } from '../components/footer'
+import { Modal } from '../components/modal'
 
 function Home() {
 	const [hasScrolled, setHasScrolled] = useState(false)
+	const [isModalOpen, setIsModalOpen] = useState(false)
 
 	const checkScrollTop = () => {
 		const offset = window.pageYOffset
@@ -41,9 +43,13 @@ function Home() {
 			minW="100vw"
 			minH="100vh"
 			bg="brand.green.light1"
+			overflowX="hidden"
 			p={0}
 		>
-      <Header hasScrolled={hasScrolled} />
+      <Header
+				hasScrolled={hasScrolled}
+				openModal={()=>setIsModalOpen(true)}
+			/>
 			<HomeSection />
 			<ServicesSection />
 			<AboutSection />
@@ -73,6 +79,12 @@ function Home() {
 				/>
 			</Button>
 			<Footer />
+			<Modal
+				isOpen={isModalOpen}
+				onClose={() => {
+					setIsModalOpen(false)
+				}}
+			/>
 		</Container>
   )
 }

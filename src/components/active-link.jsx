@@ -8,7 +8,12 @@ export function ActiveLink({
 	const { hash } = useLocation()
 
 	const isActive = useMemo(() => {
-		return hash === href;
+		const active = (hash === href) ||
+			(
+				(href === "#home") &&
+				(hash === "")
+			)
+		return active;
 	}, [hash])
 
 	const handleClick= () => {

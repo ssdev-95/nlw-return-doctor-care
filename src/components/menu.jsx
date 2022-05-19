@@ -13,12 +13,13 @@ import {
 } from '@chakra-ui/react'
 
 import { ActiveLink } from './active-link'
+import { SocialLink } from './social-link'
 
 import {
-	YoutubeLogo, FacebookLogo, InstagramLogo
+	YoutubeLogo, LinkedinLogo, InstagramLogo
 } from 'phosphor-react'
 
-export function Menu({ isOpen, onClose }) {
+export function Menu({ isOpen, onClose, openModal }) {
 	return (
 		<Drawer
 			isOpen={isOpen}
@@ -85,8 +86,12 @@ export function Menu({ isOpen, onClose }) {
 						color="brand.green.def"
 						p="1rem"
 						borderRadius="100px"
+						onClick={() => {
+							onClose()
+							setTimeout(openModal, 500)
+						}}
 					>
-						SCHEDULE AN APPOINTMENT
+						SCHEDULE APPOINTMENT
 					</Button>
 				</Flex>
 				</DrawerBody>
@@ -101,9 +106,27 @@ export function Menu({ isOpen, onClose }) {
 						alignItems="center"
 						justifyContent="center"
 					>	
-						<Icon as={InstagramLogo} h={10} w={10} />
-						<Icon as={FacebookLogo} h={10} w={10}/>
-						<Icon as={YoutubeLogo} h={10} w={10}/>
+						<SocialLink type="instagram">
+							<Icon
+								as={InstagramLogo}
+								h={10}
+								w={10}
+							/>
+						</SocialLink>
+						<SocialLink type="linkedin">
+							<Icon
+								as={LinkedinLogo}
+								h={10}
+								w={10}
+							/>
+						</SocialLink>
+						<SocialLink type="youtube">
+							<Icon
+								as={YoutubeLogo}
+								h={10}
+								w={10}
+							/>
+						</SocialLink>
 					</Flex>
 				</DrawerFooter>
 			</DrawerContent>

@@ -74,11 +74,13 @@ export function ContactSection() {
 				sales@doctorcare.gg
 			</Text>
 			<Button
+				as="a"
 				size="md"
 				bg="brand.green.def"
 				borderRadius="100px" 
 				color="brand.green.light2"
 				mt="1.8rem"
+				href="https://wa.me/+5592981616080"
 			>
 				<Icon as={WhatsappLogo} h={5} w={5} />
 				&nbsp;

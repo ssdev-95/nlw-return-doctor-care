@@ -4,10 +4,11 @@ import {
 } from '@chakra-ui/react'
 
 import { 
-	YoutubeLogo, FacebookLogo, InstagramLogo
+	YoutubeLogo, LinkedinLogo, InstagramLogo
 } from 'phosphor-react'
 
 import Fade from 'react-reveal/Fade'
+import { SocialLink } from './social-link'
 
 export function Footer() {
 	const paddingLeft = useBreakpointValue({
@@ -40,9 +41,27 @@ export function Footer() {
 			<Text>©2022 - NextLevelWeek Return</Text>
 			<Text>All rights reserved.</Text>
 			<Flex gap={4}>
-				<Icon as={InstagramLogo} h={8} w={8} />
-				<Icon as={FacebookLogo} h={8} w={8} />
-				<Icon as={YoutubeLogo} h={8} w={8} />
+				<SocialLink type="instagram">
+					<Icon
+						as={InstagramLogo}
+						h={8}
+						w={8}
+					/>
+				</SocialLink>
+				<SocialLink type="linkedin">
+					<Icon
+						as={LinkedinLogo}
+						h={8}
+						w={8} 
+					/>
+				</SocialLink>
+				<SocialLink type="youtube">
+					<Icon
+						as={YoutubeLogo}
+						h={8}
+						w={8}
+					/>
+				</SocialLink>
 			</Flex>
 			</Fade>
 		</Container>
