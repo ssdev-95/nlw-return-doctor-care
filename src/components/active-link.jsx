@@ -1,28 +1,30 @@
-import { useState } from 'react'
+import { useMemo } from 'react'
 import { Link } from '@chakra-ui/react'
+import { useLocation } from 'react-router-dom'
 
 export function ActiveLink({
 	href, color, title, onClick
 }) {
-	const [isActive, setIsActive] = useState(false)
+	const { hash } = useLocation()
 
-	const toggle = () => {
+	const isActive = useMemo(() => {
+		return hash === href;
+	}, [hash])
+
+	const handleClick= () => {
 		if(onClick) {
-			onClick()
+			setTimeout(onClick,500)
 		}
-
-	  setIsActive('#'+String(window.location).split('#')[1] === href)
 	}
 
 	return (
 		<Link
 			href={href}
-			outline={
-				isActive ? "0 0 2px 0" : 0
-			}
-			outlineColor={isActive ? color : 'transparent'}
+			w="fit-content"
 			color={color}
-			onClick={toggle}
+			onClick={handleClick}
+			borderColor={color}
+			borderBottomWidth={isActive ? 2 : 0}
 		>
 			{title}
 		</Link>
