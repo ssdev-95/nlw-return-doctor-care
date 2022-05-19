@@ -23,7 +23,7 @@ export function TestimonialsSection() {
 			id="testimonials"
 			pt="5.5rem"
 			pb="1.5rem"
-			px={0}
+			px="1rem"
 		>
 			<Fade left>
 			<Heading

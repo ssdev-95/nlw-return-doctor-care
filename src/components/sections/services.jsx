@@ -1,5 +1,7 @@
 import {
-	Container, Box, Flex, Text, Heading, Icon
+	Container, Box, Flex,
+	Text, Heading, Icon,
+	useBreakpointValue
 } from '@chakra-ui/react'
 
 import { Check } from 'phosphor-react'
@@ -15,14 +17,27 @@ export function ServicesSection() {
 		"Autoimmune and inflammation",
 		"Heart health"
 	]
+
+	const translate = useBreakpointValue({
+		base: 'translateY(-15.3rem)',
+		md: 'translateY(-11.3rem)'
+	})
 	return (
 		<Container
 			as="section"
 			bg="brand.green.light2"
 			w="100%"
+			px="1rem"
 		>
 			<Fade left>
-		  <Box bg="brand.beige" transform="translateY(-15.3rem)" w="fit-content" m="0 auto" p="2.5rem" borderRadius={4}>
+		  <Box
+				bg="brand.beige"
+				transform={translate}
+				w="fit-content"
+				m="0 auto"
+				p="2.5rem"
+				borderRadius={4}
+			>
 				<Flex flexDirection="column" gap={50}>
 					<Heading as="h1" fontSize="3.5rem" textAlign="center">
 						+3.500

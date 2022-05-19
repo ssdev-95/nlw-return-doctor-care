@@ -1,5 +1,6 @@
 import {
-	Container, Heading, Text, Icon, Button, Image
+	Heading, Flex, Text, Icon, Button,
+	Image, useBreakpointValue
 } from '@chakra-ui/react'
 import {
 	WhatsappLogo, EnvelopeSimple, MapPin
@@ -7,14 +8,39 @@ import {
 import Fade from 'react-reveal/Fade'
 
 export function ContactSection() {
+	const flexDirection = useBreakpointValue({
+		base: 'column', md: 'reverse-row'
+	})
+
+	const paddingLateral = useBreakpointValue({
+		base: '1rem', md: '16vw'
+	})
+
+	const gap = useBreakpointValue({
+     base: 0, md:'2.5rem'
+	})
+
+	const aligned = useBreakpointValue({
+		base: 'center', md: 'flex-start'
+	})
+
+	const paddingTop = useBreakpointValue({
+		base: '3.5rem', md: 0
+	})
+
 	return (
-		<Container
+		<Flex
 			as="section"	
 			id="contact"
-			pt="5.5rem"
+			pt="5.4rem"
 			pb="1.5rem"
+			px={paddingLateral}
+			flexDirection={flexDirection}
+			gap={gap}
+			alignItems={aligned}
 			bg="#fff"
 		>
+			<Flex flexDirection="column">
 			<Fade right>
 			<Heading mb="1.8rem">Contact us</Heading>
 			<Text
@@ -59,13 +85,14 @@ export function ContactSection() {
 				<Text size="md">SCHEDULE AN APPOINTMENT</Text>
 			</Button>
 			</Fade>
+			</Flex>
 			<Fade bottom>
 			<Image
 				src="/guy.png"
-				pt="3.5rem"
+				pt={paddingTop}
 				alt="An affro guy"
 			/>
 			</Fade>
-		</Container>
+		</Flex>
 	)
 }

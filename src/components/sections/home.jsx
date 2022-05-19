@@ -1,18 +1,30 @@
 import {
-	Container, Button, Flex, Image, Icon, Text, Heading
+	Button, Flex, 
+	Image, Icon, Text, Heading,
+	useBreakpointValue
 } from '@chakra-ui/react'
 
 import { WhatsappLogo } from 'phosphor-react'
 import Fade from 'react-reveal/Fade'
 
 export function HomeSection() {
+	const flexDirection = useBreakpointValue({
+		base: 'column', md: 'row'
+	})
+
+	const paddingLateral = useBreakpointValue({
+		base: '1rem', md: '16vw'
+	})
+
 	return (
-		<Container
+		<Flex
 			as="section"
 			id="home"
 			width="100%"
+			px={paddingLateral}
 			pt={100}
 		  pb={225}
+			flexDirection={flexDirection}
 		>
 			<Flex
 				as="div"
@@ -54,6 +66,6 @@ export function HomeSection() {
 		 	<Fade right>
 			<Image src="/lady.png" alt="An affro lady" mt="4rem" mx="auto" />
 			</Fade>
-		</Container>
+		</Flex>
 	)
 }

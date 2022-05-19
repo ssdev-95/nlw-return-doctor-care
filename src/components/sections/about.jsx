@@ -1,16 +1,32 @@
 import {
-	Container, Flex, Image, Text, Heading
+	Flex, Image, Text, Heading, useBreakpointValue
 } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade'
 
 export function AboutSection() {
+	const flexDirection = useBreakpointValue({
+		base: 'column', md: 'reverse-row'
+	})
+
+	const paddingLateral = useBreakpointValue({
+		base: '1rem', md: '16vw'
+	})
+
+	const gap = useBreakpointValue({
+		base: 0, md:'2.5rem'
+	})
+
 	return (
-		<Container
+		<Flex
 			as="section"
 			id="about"
 			pt="5.5rem"
 			pb="1.25rem"
+			alignItems="center"
+			px={paddingLateral}
+			flexDirection={flexDirection}
 			bg="brand.beige"
+			gap={gap}
 		>
 			<Fade left>
 			<Flex direction="column" gap={5}>
@@ -26,6 +42,6 @@ export function AboutSection() {
 				alt="A mother, a kid and a doctor"
 			/>
 			</Fade>
-		</Container>
+		</Flex>
 	)
 }

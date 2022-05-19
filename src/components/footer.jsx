@@ -1,5 +1,6 @@
 import {
-	Container, Text, Heading, Flex, Icon
+	Container, Text, Heading,
+	Flex, Icon, useBreakpointValue
 } from '@chakra-ui/react'
 
 import { 
@@ -9,13 +10,17 @@ import {
 import Fade from 'react-reveal/Fade'
 
 export function Footer() {
+	const paddingLeft = useBreakpointValue({
+		base: '1.5rem', md: '15vw'
+	})
+
 	return(
 		<Container
 			as="footer"
 			bg="brand.green.def"
 			minW="100vw"
 			py="4rem"
-			pl="1.5rem"
+			pl={paddingLeft}
 			color="#f0f2f5"
 			display="flex"
 			flexDirection="column"
