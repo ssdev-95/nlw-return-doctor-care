@@ -1,7 +1,4 @@
-import { Navigation } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
+import { Carousel } from '../slider'
 
 import {
 	Container, Heading, Text
@@ -38,22 +35,16 @@ export function TestimonialsSection() {
 				TESTIMONIALS
 			</Heading>
 			<Container maxW="400px">
-			<Swiper
-				spaceBetween={50}
-				slidesPerView={1}
-				modules={[Navigation]}
-				navigation
-			>
+			<Carousel showArrows={true}>
 				{authors.map(author => (
-					<SwiperSlide
+					<Quote
 						key={`${author.split(', ').join('-')}`}
+						author={author}
 					>
-					 <Quote	author={author}	>
-							<Text>{testimony}</Text>
-						</Quote>
-					</SwiperSlide>
+						<Text>{testimony}</Text>
+					</Quote>
 				))}
-			</Swiper>
+			</Carousel>
 			</Container>
 			</Fade>
 		</Container>

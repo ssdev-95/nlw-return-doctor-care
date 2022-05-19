@@ -13,9 +13,9 @@ export function Footer() {
 		<Container
 			as="footer"
 			bg="brand.green.def"
-			w="full"
+			minW="100vw"
 			py="4rem"
-			px="1.5rem"
+			pl="1.5rem"
 			color="#f0f2f5"
 			display="flex"
 			flexDirection="column"

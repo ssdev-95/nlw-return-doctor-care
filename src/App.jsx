@@ -38,9 +38,10 @@ function App() {
 
   return (
     <Container
-			width="100vw"
+			minW="100vw"
 			minH="100vh"
 			bg="brand.green.light1"
+			p={0}
 		>
       <Header hasScrolled={hasScrolled} />
 			<HomeSection />

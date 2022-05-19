@@ -20,7 +20,7 @@ export function Header({ hasScrolled }) {
 	return (
 		<Container
 			as="header"
-			width="100vw"
+			minW="100vw"
 			height="3.499rem"
 			p="1rem 0 1rem 1rem"
 			display="flex"
@@ -62,7 +62,15 @@ export function Header({ hasScrolled }) {
 				<Menu isOpen={isOpen} onClose={onClose} />
 			</> :
 			<>
-				<Flex as="nav" gap={4} color="brand.green.def">
+				<Flex
+					as="nav"
+					gap={4}
+					color={
+						hasScrolled ?
+						'brand.green.light1' :
+						'brand.green.def'
+					}
+				>
 					<Link href="#home">Home</Link>
 					<Link href="#services">Services</Link>
 					<Link href="#about">About</Link>
@@ -72,9 +80,17 @@ export function Header({ hasScrolled }) {
 				<Button
 					bg="tranparent"
 					borderWidth="2px"
-					borderColor="brand.green.def"
+					borderColor={
+						hasScrolled ?
+						'brand.green.light1' :
+						'brand.green.def'
+					}
 					borderRadius="full"
-					color="brand.green.def"
+					color={
+						hasScrolled ?
+						'brand.green.light1' :
+						'brand.green.def'
+					}
 					size="md"
 					mr="1rem"
 			  >

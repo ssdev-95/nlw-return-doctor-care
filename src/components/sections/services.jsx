@@ -1,14 +1,10 @@
-import { Navigation } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-
 import {
 	Container, Box, Flex, Text, Heading, Icon
 } from '@chakra-ui/react'
 
 import { Check } from 'phosphor-react'
 import Fade from 'react-reveal/Fade'
+import { Carousel } from '../slider'
 
 export function ServicesSection() {
 	const services = [
@@ -49,15 +45,8 @@ export function ServicesSection() {
 			<Container id="services" pt="5.5rem" textAlign="center" mt="-11rem">
 				<Heading as="h3" color="brand.green.def" size="sm" fontWeight="500">SERVICES</Heading>
 				<Heading w="15.75rem" m="0 auto" size="2xl">How can we help to make you feel better?</Heading>
-			<Container maxW="fit-content">
-				<Swiper
-					spaceBetween={50}
-					slidesPerView={1}
-					modules={[Navigation]}
-					navigation
-				>
+				<Carousel showArrows={true}>
 				{services.map((service, index) => (
-				<SwiperSlide>
 				<Box
 					p={6}
 					my={6}
@@ -83,10 +72,8 @@ export function ServicesSection() {
 						<Text>Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Cevadis im ampola pa arma uma pindureta.</Text>
 					</Flex>
 				</Box>
-				</SwiperSlide>
 				))}
-				</Swiper>
-				</Container>
+				</Carousel>
 			</Container>
 			</Fade>
 		</Container>
