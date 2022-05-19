@@ -1,6 +1,5 @@
 import {
 	Flex,
-	Link,
 	Text,
 	Icon,
 	Button,
@@ -12,6 +11,8 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from '@chakra-ui/react'
+
+import { ActiveLink } from './active-link'
 
 import {
 	YoutubeLogo, FacebookLogo, InstagramLogo
@@ -44,13 +45,38 @@ export function Menu({ isOpen, onClose }) {
 		        <Text fontWeight="700">Care</Text>
 					</Text>
 				</DrawerHeader>
-				<DrawerBody color="#f0f2f5">
+				<DrawerBody>
 				<Flex direction="column" gap="2.5rem">
-					<Link onClick={onClose} href="#home">Home</Link>
-					<Link onClick={onClose} href="#about">About</Link>
-					<Link onClick={onClose} href="#services">Services</Link>
-					<Link onClick={onClose} href="#testimonials">Testimonials</Link>
-					<Link onClick={onClose} href="#contact">Contact</Link>
+					<ActiveLink
+						color="#f0f2f5"
+						onClick={onClose}
+						href="#home"
+						title="Home"
+					/>
+					<ActiveLink
+						color="#f0f2f5"
+						onClick={onClose}
+						href="#about"
+						title="About" 
+					/>
+					<ActiveLink
+						color="#f0f2f5"
+						onClick={onClose}
+						href="#services"
+						title="Services"
+					/>
+					<ActiveLink
+						color="#f0f2f5"
+						onClick={onClose}
+						href="#testimonials"
+						title="Testimonials"
+					/>
+					<ActiveLink
+						color="#f0f2f5"
+						onClick={onClose}
+						href="#contact"
+						title="Contact"
+					/>
 					<Button
 						size="md"
 						w="fit-content"

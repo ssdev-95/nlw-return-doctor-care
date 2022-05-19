@@ -4,7 +4,6 @@ import {
 	Container,
 	Button,
 	Image,
-	Link,
 	Flex,
 	Icon,
 	Text
@@ -13,6 +12,7 @@ import {
 import { List } from 'phosphor-react'
 
 import { Menu } from './menu'
+import { ActiveLink } from './active-link'
 
 export function Header({ hasScrolled }) {
 	const { isOpen, onOpen, onClose } = useDisclosure()
@@ -65,18 +65,53 @@ export function Header({ hasScrolled }) {
 				<Flex
 					as="nav"
 					gap={4}
-					color={
-						hasScrolled ?
-						'brand.green.light1' :
-						'brand.green.def'
-					}
 				>
-					<Link href="#home">Home</Link>
-					<Link href="#services">Services</Link>
-					<Link href="#about">About</Link>
-					<Link href="#testimonials">Testimonials</Link>
-					<Link href="#contact">Contact</Link>
-				</Flex>		
+					<ActiveLink
+						href="#home"
+						title="Home"
+						color={
+							hasScrolled ?
+							'brand.green.light1' :
+							'brand.green.def'
+						}
+					/>
+					<ActiveLink
+						href="#services"
+						title="Services"
+						color={
+							hasScrolled ?
+							'brand.green.light1' :
+							'brand.green.def'
+						}
+					/>
+					<ActiveLink
+						href="#about"
+						title="About"
+						color={
+							hasScrolled ?
+							'brand.green.light1' :
+							'brand.green.def'
+						}
+					/>
+					<ActiveLink
+						href="#testimonials"
+						title="Testimonials"
+						color={
+							hasScrolled ?
+							'brand.green.light1' :
+							'brand.green.def'
+						}
+					/>
+					<ActiveLink
+						href="#contact"
+						title="Contact"
+						color={
+							hasScrolled ?
+							'brand.green.light1' :
+							'brand.green.def'
+						}
+					/>
+				</Flex>
 				<Button
 					bg="tranparent"
 					borderWidth="2px"
