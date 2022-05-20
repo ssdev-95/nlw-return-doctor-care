@@ -12,6 +12,30 @@
 
 * Responsivity skills enhancement;
 
+### Main techs and libs used:
+
+* Vite
+
+* React JS
+
+* Chakra UI
+
+* Phosphor Icons
+
+* React Responsive Carousel
+ 
+* React Reveal
+
+* React Router Dom
+
+### How to run locally
+
+Simply clone this repo, navigate to project folder,
+then run this command ` yarn ` to install dependencies.
+
+Next run ` yarn dev ` to start development server,
+then open on browser at ` http://localhost:3000 `
+
 See full layout [here](https://www.figma.com/file/H2U2hn1kO5pD9EkAX83bS2/DoctorCare-(Community))
 
 Access live website [here](https://doctor-care-delta.vercel.app)
