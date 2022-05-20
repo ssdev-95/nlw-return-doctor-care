@@ -16,6 +16,10 @@ See full layout [here](https://www.figma.com/file/H2U2hn1kO5pD9EkAX83bS2/DoctorC
 
 Access live website [here](https://doctor-care-delta.vercel.app)
 
+Preview
+
+![Preview Gif](./public/doctor-care.gif)
+
 > Made in the Rocketseat's event,
 > Next Level Week Return
 
